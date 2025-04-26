@@ -7,7 +7,7 @@ const calendlyService = new CalendlyService(url);
 async function main() {
   try {
     const availableEvents = await calendlyService.getAvailableEvents();
-    if (!availableEvents.length || !availableEvents[0].spots?.length) {
+    if (!availableEvents.length) {
       console.error("No available time slots found");
       return;
     }
